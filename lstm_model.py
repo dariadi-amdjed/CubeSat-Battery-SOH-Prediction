@@ -1,3 +1,6 @@
+"This Code You Can Use"
+"By Amdjed Dariadi"
+
 import scipy.io
 import numpy as np
 import matplotlib.pyplot as plt
@@ -36,10 +39,10 @@ model.add(LSTM(50, input_shape=(1, 10)))
 model.add(Dense(1))
 model.compile(loss='mean_squared_error', optimizer='adam')
 
-print("بدء تدريب نموذج الذكاء الاصطناعي... يرجى الانتظار")
+print("Start Training The Model .... Waiting")
 model.fit(X_train, y_train, epochs=50, batch_size=1, verbose=1)
 
-print("تم التدريب بنجاح!")
+print("Success Train The Data")
 
 predictions = model.predict(X_train)
 predictions = scaler.inverse_transform(predictions)
